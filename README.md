@@ -19,9 +19,21 @@ You can fill in the other areas on the page with the following commands
 
 
 
+## To-do
 
 
 
+- [x] Code listing style
+- [ ] Table style
+- [ ] Table of contents style
 
+v1.0+
 
+- [ ] Adjustable colors
+- [ ] Intra-document bookmarks/links
+- [x] Less finicky `dent` box
+- [ ] Single column option
+- [x] Figure macro
+- [ ] Wide figure macro
+- [ ] Precent orphan columns 
 

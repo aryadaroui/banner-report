@@ -22,7 +22,7 @@
 \RequirePackage[table]{xcolor} % breaks when grouped in the Color section; will tidy later
 \RequirePackage[framemethod = tikz]{mdframed}
 \RequirePackage{calc}
-% \RequirePackage{listings}
+\RequirePackage{listings}
 
 % Margins
 \RequirePackage[
@@ -151,7 +151,15 @@
   []    
 
 % Environments
-\newenvironment{dent}[1]
+
+\newenvironment{dent}
+{
+	\begin{mdframed}[leftline=true, backgroundcolor=sand, innerleftmargin=.11in, linewidth=1.2pt, topline=false, bottomline=false, rightline=false, linecolor = umber]
+}{		
+	\end{mdframed}
+}
+
+\newenvironment{dent2}[1]
 {
 	\begin{mdframed}[hidealllines=true, backgroundcolor=sand, innerleftmargin=0in]
 		\begin{tabular}{l !{\color{umber}\vline width 1.2pt} p{\linewidth - \widthof{#1}*\real{1.5} - 0.24in}}
@@ -161,6 +169,23 @@
 	\end{mdframed}
 }
 
+\lstnewenvironment{code}{
+	\lstset{
+		basicstyle=\ttfamily,
+		frame = leftline,
+		framerule=1.2pt,
+		backgroundcolor=\color{sand},
+		numbers=left,
+		xleftmargin=.21in,
+		rulecolor=\color{umber}
+	}
+}{}
 
-
-% need fig and figwide
+% need figwide
+% trash for now
+% \begin{dent}
+% 	\begin{lstlisting}[basicstyle=\ttfamily, frame = leftline, framerule=1pt, backgroundcolor=\color{sand}, numbers=left, xleftmargin=.14in,  rulecolor=\color{umber}, framexleftmargin=2pt, ]
+% foo
+% bar
+% 	\end{lstlisting}
+% \end{dent}
