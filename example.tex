@@ -1,0 +1,57 @@
+\documentclass{bannerReport}
+
+\usepackage{lipsum}
+
+
+
+\title{Banner Report}
+\subtitle{A Stylish \LaTeX \hspace{.008em} Class}
+\info{Sep 2019 \\ v0.8}
+\author{ {\small prepared by} \\ Arya Daroui}
+
+\begin{document}
+	%\textblockcolour{gray}
+	\titlepage{Assets/banner.pdf}
+
+	\section*{Abstract}
+		\lipsum[1]
+
+	\section{Introduction}
+		\lipsum[2]
+
+	\section{Theory}
+		\lipsum[3] \footnote{\lipsum[10][1]}
+		\begin{dent}{}
+			\lipsum[8]
+			$$
+			f(x) = \sum^\infty _{n = 1} \overset{n}{\dot{F}}(x)  = \dot{F}(x) + \ddot{F}(x) +\cdots + \overset{n}{\dot{F}}(x) 
+			$$
+		\end{dent}
+
+		\subsection{Computation}
+			\lipsum[4]
+			
+			% needs its own environment; this is a bad way of doing this
+			\begin{dent}{>>}
+				\mono foo = [1, 2, 3] \\
+				& \mono bar = len(foo) lol
+			\end{dent}
+			
+			
+			
+			\subsubsection{Edge cases}
+				\lipsum[5]
+
+	\section{Discussion}
+		\lipsum[6]
+		% should create a macro for this as it's too verbose
+		\begin{figure}[ht]\centering
+			\includegraphics[width=\linewidth]{Assets/EE.png}
+			\caption{EE at The Beach}
+		\end{figure}
+		
+
+	\section{Conclusion}
+		\lipsum[7]
+
+\end{document}
