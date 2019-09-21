@@ -17,7 +17,7 @@ You can fill in the other areas on the page with the following commands
 \author{ {\small prepared by} \\ Arya Daroui}
 ```
 
-![example](/Users/aryadaroui/Documents/Github/banner-report/example.png)
+![example](example.png)
 
 ## To-do
 
