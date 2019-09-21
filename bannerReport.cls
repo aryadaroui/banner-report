@@ -15,11 +15,10 @@
 \LoadClass{article}
 
 % General Packages
-\RequirePackage[utf8]{inputenc}
 \RequirePackage{amsmath, amsfonts, amssymb}
 \RequirePackage{graphicx}
 \RequirePackage{xpatch}
-\RequirePackage[table]{xcolor} % breaks when grouped in the Color section; will tidy later
+\RequirePackage[table]{xcolor}
 \RequirePackage[framemethod = tikz]{mdframed}
 \RequirePackage{calc}
 \RequirePackage{listings}
@@ -46,9 +45,6 @@
 %   basicstyle=\ttfamily,
 % }
 
-% Colors
-\definecolor{umber}{RGB}{100,90,75}
-\definecolor{sand}{RGB}{243,238,233}
 
 % Figures and Tables Captions
 \RequirePackage[labelfont={bf,sf,small}, labelsep=period, justification=raggedright]{caption}
@@ -89,8 +85,8 @@
 		\begin{flushleft}
 			\noindent{\Huge{\sffamily{\textbf{\title}}}}
 			\vspace{.1in}
-			\textcolor{umber}{\rule{3.4in}{2.5pt}} 
-			\color{umber}{\huge{\sffamily{\textbf{\subtitle}}}}
+			\textcolor{darkColor}{\rule{3.4in}{2.5pt}} 
+			\color{darkColor}{\huge{\sffamily{\textbf{\subtitle}}}}
 		\end{flushleft}
 	\end{textblock}
 
@@ -111,14 +107,14 @@
 % Header and Footer
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{\color{umber}{\sffamily{\title \; --- \hspace{.08em} \subtitle}}}
+\lhead{\color{darkColor}{\sffamily{\title \; --- \hspace{.08em} \subtitle}}}
 \chead{}
 \rhead{}
 \lfoot{}
 \cfoot{}
 \rfoot{\color{black}{\sffamily{\thepage}}}
-\xpretocmd\headrule{\color{umber}}{}{\PatchFailed}
-\xpretocmd\footrule{\color{umber}}{}{\PatchFailed}
+\xpretocmd\headrule{\color{darkColor}}{}{\PatchFailed}
+\xpretocmd\footrule{\color{darkColor}}{}{\PatchFailed}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
 
@@ -128,17 +124,17 @@
   {\color{white}\large\sffamily\bfseries}
   {}
   {0em}
-  {\colorbox{umber}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
+  {\colorbox{darkColor}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
 {\arabic{section}.\hfil} {\centering #1}}}}
   []
 \titleformat{name=\section,numberless}
   {\color{white}\large\sffamily\bfseries}
   {}
   {0em}
-  {\colorbox{umber}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering #1}}}
+  {\colorbox{darkColor}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\centering #1}}}
   []  
 \titleformat{\subsection}
-  {\color{umber}\sffamily\bfseries}
+  {\color{darkColor}\sffamily\bfseries}
   {\thesubsection}
   {0.5em}
   {#1}
@@ -154,16 +150,16 @@
 
 \newenvironment{dent}
 {
-	\begin{mdframed}[leftline=true, backgroundcolor=sand, innerleftmargin=.11in, linewidth=1.2pt, topline=false, bottomline=false, rightline=false, linecolor = umber]
+	\begin{mdframed}[leftline=true, backgroundcolor=lightColor, innerleftmargin=.11in, linewidth=1.2pt, topline=false, bottomline=false, rightline=false, linecolor = darkColor]
 }{		
 	\end{mdframed}
 }
 
 \newenvironment{dent2}[1]
 {
-	\begin{mdframed}[hidealllines=true, backgroundcolor=sand, innerleftmargin=0in]
-		\begin{tabular}{l !{\color{umber}\vline width 1.2pt} p{\linewidth - \widthof{#1}*\real{1.5} - 0.24in}}
-			\color{umber}{\Large{#1}} &
+	\begin{mdframed}[hidealllines=true, backgroundcolor=lightColor, innerleftmargin=0in]
+		\begin{tabular}{l !{\color{darkColor}\vline width 1.2pt} p{\linewidth - \widthof{#1}*\real{1.5} - 0.24in}}
+			\color{darkColor}{\Large{#1}} &
 }{		
 		\end{tabular}
 	\end{mdframed}
@@ -174,17 +170,17 @@
 		basicstyle=\ttfamily,
 		frame = leftline,
 		framerule=1.2pt,
-		backgroundcolor=\color{sand},
+		backgroundcolor=\color{lightColor},
 		numbers=left,
 		xleftmargin=.21in,
-		rulecolor=\color{umber}
+		rulecolor=\color{darkColor}
 	}
 }{}
 
 % need figwide
 % trash for now
 % \begin{dent}
-% 	\begin{lstlisting}[basicstyle=\ttfamily, frame = leftline, framerule=1pt, backgroundcolor=\color{sand}, numbers=left, xleftmargin=.14in,  rulecolor=\color{umber}, framexleftmargin=2pt, ]
+% 	\begin{lstlisting}[basicstyle=\ttfamily, frame = leftline, framerule=1pt, backgroundcolor=\color{lightColor}, numbers=left, xleftmargin=.14in,  rulecolor=\color{darkColor}, framexleftmargin=2pt, ]
 % foo
 % bar
 % 	\end{lstlisting}

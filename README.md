@@ -6,7 +6,7 @@ A LaTeX class for a two column report with a fancy title page.
 
 ## Title page
 
-Call the `	\titlepage{banner.pdf}` command at the start of your document, with `banner.pdf` as the title of the banner file. The file should be a 3.55 in × 9.6 in PDF.
+Call the `\titlepage{banner.pdf}` command at the start of your document, with `banner.pdf` as the title of the banner file. The file should be a 3.55 in × 9.6 in PDF.
 
 You can fill in the other areas on the page with the following commands 
 
@@ -29,7 +29,7 @@ You can fill in the other areas on the page with the following commands
 
 v1.0+
 
-- [ ] Adjustable colors
+- [x] Adjustable colors
 - [ ] Intra-document bookmarks/links
 - [x] Less finicky `dent` box
 - [ ] Single column option
