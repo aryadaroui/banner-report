@@ -6,7 +6,7 @@ A LaTeX class for a two column report with a fancy title page.
 
 ## Title page
 
-Call the `\titlepage{banner.pdf}` command at the start of your document, with `banner.pdf` as the title of the banner file. The file should be a 3.55 in × 9.6 in PDF.
+Call the `\titlepage{banner.pdf}` command at the beginning of your document, but replace `banner.pdf` with the banner image you'd like to use. The file should be a 3.55 in × 9.6 in PDF. You may be able to use other image formats if the DPI information is embedded like it is for PDFs, but that behavior has not been tested.
 
 You can fill in the other areas on the page with the following commands 
 
@@ -35,5 +35,5 @@ v1.0+
 - [ ] Single column option
 - [x] Figure macro
 - [ ] Wide figure macro
-- [ ] Precent orphan columns 
+- [ ] Prevent orphan columns 
 
