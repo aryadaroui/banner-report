@@ -14,8 +14,8 @@
 }
 
 % Colors
-\definecolor{darkColor}{RGB}{100,90,75}
-\definecolor{lightColor}{RGB}{243,238,233}
+\definecolor{darkColor}{RGB}{100,90,75}		% umber
+\definecolor{lightColor}{RGB}{243,238,233}	% sand
 
 \title{Banner Report}
 \subtitle{A Stylish \LaTeX \hspace{.008em} Class}
@@ -31,33 +31,34 @@
 
 	\section{Introduction}
 		\lipsum[2]
+		\fig{EE.pdf}{Electrical engineering at The Beach}
 
-	\section{Theory}
+	\section{Something important}
 		\lipsum[3] \footnote{\lipsum[10][1]}
-		\subsection{Computation}
+		\begin{equation}
+			F(\mathrm{i} \omega) = \int_{-\infty}^\infty f(t) \mathrm{e}^{\mathrm{i} \omega t} \, \mathrm{d}t
+		\end{equation}	
+	
+
+		\subsection{Another definitely important thing}
 			\lipsum[4]
 			
 			\begin{dent}
 				\lipsum[2]
 				$$
-					f(x) = \int_{-\infty}^\infty g(x) \, \mathrm{d}x
+					\delta = 10 \text{ μm}
 				$$
-				is a very nice function $f(x)$
 			\end{dent}
 
 % need to configure gobble argument
-			\begin{code}
-foo
-bar
-			\end{code}
-			
-			\subsubsection{Edge cases}
-				\lipsum[5]
 
-	\section{Discussion}
-		\lipsum[6]
-		\fig{EE.png}{EE at the Beach}
-		
+			
+			\subsubsection{Probably the most important thing}
+				\begin{code}
+def foo():
+	bar = "what a beautiful document"
+	print(bar)
+				\end{code}	
 
 	\section{Conclusion}
 		\lipsum[7]

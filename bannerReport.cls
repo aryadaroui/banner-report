@@ -15,7 +15,6 @@
 \LoadClass{article}
 
 % General Packages
-\RequirePackage{amsmath, amsfonts, amssymb}
 \RequirePackage{graphicx}
 \RequirePackage{xpatch}
 \RequirePackage[table]{xcolor}
@@ -35,7 +34,9 @@
 
 % Font
 \RequirePackage{fontspec}
-\RequirePackage{times}
+% \RequirePackage{times}
+\RequirePackage{mathptmx}
+\RequirePackage{amsmath, amsfonts, amssymb}
 \newfontfamily{\light}[UprightFont={* Light}]{Helvetica Neue}
 \newfontfamily{\mono}[Scale=.95]{Consolas}
 \setmainfont[Ligatures=TeX]{Times}
@@ -124,8 +125,7 @@
   {\color{white}\large\sffamily\bfseries}
   {}
   {0em}
-  {\colorbox{darkColor}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{
-{\arabic{section}.\hfil} {\centering #1}}}}
+  {\colorbox{darkColor}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{{\arabic{section}.\hfil} {\centering #1}}}}
   []
 \titleformat{name=\section,numberless}
   {\color{white}\large\sffamily\bfseries}
@@ -168,12 +168,14 @@
 \lstnewenvironment{code}{
 	\lstset{
 		basicstyle=\ttfamily,
-		frame = leftline,
+		frame = lt,
 		framerule=1.2pt,
 		backgroundcolor=\color{lightColor},
 		numbers=left,
 		xleftmargin=.21in,
-		rulecolor=\color{darkColor}
+		rulecolor=\color{darkColor},
+		tabsize=4,
+		framextopmargin= 1pt,
 	}
 }{}
 

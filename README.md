@@ -17,7 +17,8 @@ You can fill in the other areas on the page with the following commands
 \author{ {\small prepared by} \\ Arya Daroui}
 ```
 
-![example](example.png)
+![titlepage](Assets/titlepage.png)
+![titlepage](Assets/body.png)
 
 ## To-do
 
@@ -30,6 +31,7 @@ You can fill in the other areas on the page with the following commands
 v1.0+
 
 - [x] Adjustable colors
+- [ ] Choose cross-platform sans font because I forgot Windows doesn't have Helvetica (Neue)
 - [ ] Intra-document bookmarks/links
 - [x] Less finicky `dent` box
 - [ ] Single column option
