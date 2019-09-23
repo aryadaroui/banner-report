@@ -18,6 +18,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{xpatch}
 \RequirePackage[table]{xcolor}
+% \RequirePackage{tabu}
 \RequirePackage[framemethod = tikz]{mdframed}
 \RequirePackage{calc}
 \RequirePackage{listings}
@@ -163,6 +164,52 @@
 }{		
 		\end{tabular}
 	\end{mdframed}
+}
+
+
+
+\newenvironment{tableLight}[2]
+{
+	\begin{table}
+		\centering
+
+		\if\relax\detokenize{#1}\relax
+        \else
+        \caption{#1}
+        \fi
+		\begin{tabular}{#2}
+			\hline
+			\rowcolor{lightColor}
+		
+}{		
+		\hline
+		\end{tabular}
+		% \label{tab:#1}
+	\end{table}
+}
+
+\makeatletter
+\def\zapcolorreset{\let\reset@color\relax\ignorespaces}
+\def\colorrows#1{\noalign{\aftergroup\zapcolorreset#1}\ignorespaces}
+\makeatother
+
+\newenvironment{tableDark}[2]
+{
+	\begin{table}
+		\centering
+		\if\relax\detokenize{#1}\relax
+        \else
+        \caption{#1}
+		\fi
+		\rowcolors{2}{}{lightColor}
+		\begin{tabular}{#2}
+			\hline
+			\rowcolor{darkColor}
+}{		
+		\hline
+		\end{tabular}
+		% \label{tab:#1}
+	\end{table}
 }
 
 \lstnewenvironment{code}{

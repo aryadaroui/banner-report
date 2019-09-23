@@ -25,12 +25,13 @@ You can fill in the other areas on the page with the following commands
 
 
 - [x] Code listing style
-- [ ] Table style
+- [x] Table style
 - [ ] Table of contents style
 
 v1.0+
 
 - [x] Adjustable colors
+- [ ] Make `tableDark` style auto color header
 - [ ] Choose cross-platform sans font because I forgot Windows doesn't have Helvetica (Neue)
 - [ ] Intra-document bookmarks/links
 - [x] Less finicky `dent` box
@@ -38,4 +39,3 @@ v1.0+
 - [x] Figure macro
 - [ ] Wide figure macro
 - [ ] Prevent orphan columns 
-

@@ -13,6 +13,8 @@
 	\end{figure}
 }
 
+\def\arraystretch{1.2}
+
 % Colors
 \definecolor{darkColor}{RGB}{100,90,75}		% umber
 \definecolor{lightColor}{RGB}{243,238,233}	% sand
@@ -28,7 +30,6 @@
 
 	\section*{Abstract}
 		\lipsum[1]
-
 	\section{Introduction}
 		\lipsum[2]
 		\fig{EE.pdf}{Electrical engineering at The Beach}
@@ -59,6 +60,22 @@ def foo():
 	bar = "what a beautiful document"
 	print(bar)
 				\end{code}	
+
+
+\begin{tableLight}{light}{|c|c|c|}
+\textbf{Did} & \textbf{you}  & \textbf{ever} \\
+\hline
+hear & the & tragedy \\
+of & Darth & Plageueis \\
+The & Wise? & bottom text\\
+\end{tableLight}
+
+\begin{tableDark}{dark}{|c|c|c|}
+	\color{white}\textbf{One} & \color{white}\textbf{Two}  & \color{white}\textbf{Three} \\
+	Hello & there. & General \\
+	Kenobi! & You & are \\
+	a & bold & one. \\
+\end{tableDark}
 
 	\section{Conclusion}
 		\lipsum[7]
