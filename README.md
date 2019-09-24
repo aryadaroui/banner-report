@@ -17,8 +17,23 @@ You can fill in the other areas on the page with the following commands
 \author{ {\small prepared by} \\ Arya Daroui}
 ```
 
-![titlepage](Assets/titlepage.png)
-![titlepage](Assets/body.png)
+## Custom commands
+
+### Environments
+
+`dent`, `dent2{symbol}`, `code`,  `tableLight{caption}{colAlignment}`, `tableDark{caption}{colAlignment}`
+
+### Macros
+
+`fig{file.pdf}{caption}`, `plot{caption}{file.pdf}`
+
+![p0](Assets/p0.png)
+![p1](Assets/p1.png)
+![p2](Assets/p2.png)
+
+## Requirements
+
+You will have to use XeLaTeX to typeset due to unicode support, and to avoid the annoying italic mu problem.
 
 ## To-do
 
@@ -26,12 +41,15 @@ You can fill in the other areas on the page with the following commands
 
 - [x] Code listing style
 - [x] Table style
-- [ ] Table of contents style
+- [x] Table of contents style
 
 v1.0+
 
 - [x] Adjustable colors
-- [ ] Make `tableDark` style auto color header
+- [ ] auto reference compatibility à la BibTeX
+- [ ] Make `tableDark` style auto color the header
+- [ ] Fix spacing before and after code section
+- [ ] Fix spacing before and after figures
 - [ ] Choose cross-platform sans font because I forgot Windows doesn't have Helvetica (Neue)
 - [ ] Intra-document bookmarks/links
 - [x] Less finicky `dent` box

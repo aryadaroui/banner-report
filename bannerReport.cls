@@ -1,6 +1,6 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % Banner Report Class											
-% v0.8 - Sep 2019
+% v1.0 - Sep 2019
 %
 % Written by Arya Daroui, daroui.arya@gmail.com
 % This work is under the MIT License
@@ -147,7 +147,7 @@
   {#1}
   []    
 
-% Environments
+% Environments and commands
 
 \newenvironment{dent}
 {
@@ -170,7 +170,7 @@
 
 \newenvironment{tableLight}[2]
 {
-	\begin{table}
+	\begin{table}[!htbp]
 		\centering
 
 		\if\relax\detokenize{#1}\relax
@@ -188,14 +188,9 @@
 	\end{table}
 }
 
-\makeatletter
-\def\zapcolorreset{\let\reset@color\relax\ignorespaces}
-\def\colorrows#1{\noalign{\aftergroup\zapcolorreset#1}\ignorespaces}
-\makeatother
-
 \newenvironment{tableDark}[2]
 {
-	\begin{table}
+	\begin{table}[!htbp]
 		\centering
 		\if\relax\detokenize{#1}\relax
         \else
@@ -210,6 +205,22 @@
 		\end{tabular}
 		% \label{tab:#1}
 	\end{table}
+}
+
+\newcommand{\fig}[2]{
+	\begin{figure}[!htbp]
+		\centering
+		\includegraphics[width=\linewidth]{#1}
+		\caption{#2}
+	\end{figure}
+}
+
+\newcommand{\plot}[2]{
+	\begin{figure}[!htbp]
+		\centering
+		\caption{#1}
+		\includegraphics[width=\linewidth]{#2}
+	\end{figure}
 }
 
 \lstnewenvironment{code}{
